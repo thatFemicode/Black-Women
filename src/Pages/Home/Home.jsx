@@ -5,7 +5,7 @@ import { HomeStyled } from "./HomeStyled";
 const Home = () => {
   return (
     <HomeStyled>
-      <MainStyled></MainStyled>
+      <MainStyled>Home</MainStyled>
     </HomeStyled>
   );
 };
