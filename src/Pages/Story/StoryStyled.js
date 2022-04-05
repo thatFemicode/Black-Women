@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StoryStyled = styled.main`
   height: 100vh;
-
+  overflow: hidden;
   background-color: #333;
   .slide {
     height: 100%;
@@ -10,12 +10,12 @@ export const StoryStyled = styled.main`
     top: 0;
     position: fixed;
     visibility: hidden;
-
+    overflow: hidden;
     &__outer,
     &__inner {
       width: 100%;
       height: 100%;
-      overflow-y: hidden;
+      overflow: hidden;
     }
 
     &__content {
@@ -47,12 +47,10 @@ export const StoryStyled = styled.main`
       --width: 200;
       display: block;
       text-align: left;
-      font-family: "Bandeins Sans & Strange Variable";
+      /* font-family: "Bandeins Sans & Strange Variable"; */
       font-size: clamp(5rem, 15vw, 15rem);
       font-weight: 900;
-      font-variation-settings: "wdth" var(--width);
-      margin: 0;
-      padding: 0;
+      /* font-variation-settings: "wdth" var(--width); */
       color: #f2f1fc;
       z-index: 999;
       mix-blend-mode: difference;

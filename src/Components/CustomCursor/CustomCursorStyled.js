@@ -5,6 +5,7 @@ export const CustomCursorStyled = styled.div`
   .cursor {
     position: absolute;
     background-color: #333;
+    mix-blend-mode:difference;
     width: 6px;
     height: 6px;
     border-radius: 100%;
@@ -27,6 +28,7 @@ export const CustomCursorStyled = styled.div`
     position: absolute;
     /* background-color: rgba(255, 255, 255, 0.3); */
     background-color: #333;
+    mix-blend-mode:difference;
     width: 20px;
     height: 20px;
     border-radius: 100%;

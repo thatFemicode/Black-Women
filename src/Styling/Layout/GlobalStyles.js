@@ -23,7 +23,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'Space Grotesk', sans-serif;
+    /* font-family: 'Space Grotesk', sans-serif; */
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
     font-weight:500;
     text-decoration: none;
     font-size:100%;
@@ -54,7 +57,7 @@ body{
   background-color:#f0eff1;
   /* background-color:#000; */
 overflow: hidden;
-/* overflow-x: hidden; */
+overflow-x: hidden;
 height:100%;
 width:100%;
 color:var(--black);
