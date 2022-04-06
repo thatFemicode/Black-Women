@@ -1,8 +1,8 @@
-import React from "react";
-import { BannerStyled } from "./BannerStyled";
+import React from 'react';
+import { BannerStyled } from './BannerStyled';
 
 const Banner = () => {
-  return <Banner>Banner</Banner>;
+  return <BannerStyled>Banner</BannerStyled>;
 };
 
 export default Banner;

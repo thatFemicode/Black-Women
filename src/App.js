@@ -8,19 +8,15 @@ import Story from './Pages/Story/Story';
 import Preloader from './Components/Preloader/Preloader';
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   return (
     <ThemeProvider theme={theme}>
-      {loading ? (
-        <Preloader setLoading={setLoading} />
-      ) : (
-        <MainStyled>
-          <Routes>
-            <Route path="/" element={<Home loading={loading} />} />
-            <Route path="/story" element={<Story />} />
-          </Routes>
-        </MainStyled>
-      )}
+      <MainStyled>
+        <Routes>
+          <Route path="/" element={<Home loading={loading} />} />
+          <Route path="/story" element={<Story />} />
+        </Routes>
+      </MainStyled>
     </ThemeProvider>
   );
 }

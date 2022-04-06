@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 // import bg from "./Pages/Marketplace/img/noise.png";
 const GlobalStyle = createGlobalStyle`
 
@@ -54,9 +54,9 @@ html {
 }
 body{
   position:relative;
-  background-color:#f0eff1;
   /* background-color:#000; */
-overflow: hidden;
+/* overflow: hidden; */
+background-color: #f0eff1;
 overflow-x: hidden;
 height:100%;
 width:100%;
