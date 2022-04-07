@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const PreloaderStyled = styled.div`
-  background: #000;
+  background: #333;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -31,14 +31,17 @@ export const PreloaderStyled = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
+    /* mix-blend-mode: difference; */
     width: 100%;
+    color: #444;
     text-align: center;
+    font-size: 2vw;
     transform: translate(-50%, -50%);
     /* color: var(--burlywood);
     font-size: calc(var(--VW) * 2); */
     z-index: 31;
     @media (hover: none) and (pointer: coarse), (max-width: 500px) {
-      font-size: calc(var(--VW) * 4);
+      /* font-size: calc(var(--VW) * 4); */
     }
   }
 `;

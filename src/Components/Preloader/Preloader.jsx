@@ -10,17 +10,15 @@ const Preloader = ({ setLoading }) => {
   let load = useRef(null);
   let bg = useRef(null);
   let message = useRef(null);
+  // let text1 = useRef(null);
   const generateMessage = () => {
     const messages = [
-      'Hold On...',
-      'Just A Sec...',
-      'Any Minute Now...',
-      'Loading...',
-      "It's Coming...",
-      'One Moment...',
-      'Almost There...',
-      'Hang On...',
-      'Easy Does It...',
+      'skin just like pearls',
+      'Self-esteem means knowing you are the dream',
+      'You are your best thing.',
+      'Black is the essence of beauty',
+      ' I will love who I am',
+      'You are beautiful',
     ];
     const randomNum = Math.floor(Math.random() * messages.length);
     setMess(messages[randomNum]);
@@ -36,9 +34,10 @@ const Preloader = ({ setLoading }) => {
         }
       });
     }, 40);
+
     generateMessage();
     preloaderAnimation(preloader, load, bg, message, setLoading);
-  }, []);
+  }, [setLoading]);
   return (
     <PreloaderStyled ref={(el) => (preloader = el)} width={width}>
       <div ref={(el) => (load = el)} className="load"></div>

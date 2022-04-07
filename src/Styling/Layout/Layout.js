@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const OuterLayout = styled.section`
   /* max-width: 1300px; */
+  overflow-x: hidden;
   max-width: 1400px;
   width: 100%;
   /* width: 70%; */
@@ -20,6 +21,7 @@ export const OuterLayout = styled.section`
     /* max-width: 768px; */
     width: 100%;
   }
+
   /* @media screen and (max-width: 1347px) {
     padding: 3rem 8rem;
   }

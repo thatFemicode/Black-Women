@@ -1,5 +1,4 @@
-import gsap from 'gsap';
-
+import { gsap } from 'gsap';
 export const preloaderAnimation = (item1, item2, item3, item4, setLoading) => {
   const tl = gsap.timeline({
     onComplete: () => {
