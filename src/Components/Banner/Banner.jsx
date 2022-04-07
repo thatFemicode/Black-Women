@@ -39,6 +39,12 @@ const Banner = () => {
             <div className="text">
               <p ref={(el) => (message = el)}>Black</p>
             </div>
+            <div className="text2">
+              <p ref={(el) => (message = el)}>Essence of</p>
+            </div>
+            <div className="text3">
+              <p ref={(el) => (message = el)}>Beauty</p>
+            </div>
             <div ref={(el) => (containerRef = el)} className="texting">
               <div ref={(el) => (imageRef = el)} className="img">
                 <img src={Princess} alt="" />

@@ -34,12 +34,42 @@ export const BannerStyled = styled.section`
       /* grid-auto-flow: row dense; */
 
       .text {
-        grid-column: 5/9;
-        grid-row: 1 / span 3;
-        text-align: center;
+        grid-column: 9/11;
+        grid-row: 1 / 3;
+        text-align: left;
 
         p {
-          font-size: 8.5rem;
+          margin-top: -2.5rem;
+          font-size: 8rem;
+          color: #222;
+        }
+      }
+      .text2 {
+        grid-column: 3/13;
+        grid-row: 5 / 10;
+        text-align: center;
+        position: relative;
+
+        p {
+          /* margin-top: -3.8rem; */
+          /* margin-left: 3rem; */
+          font-size: 6rem;
+          color: #222;
+          position: absolute;
+          left: 40%;
+          transform: translateX(-50%);
+        }
+      }
+      .text3 {
+        grid-column: 1/6;
+        grid-row: 10 / 12;
+        text-align: left;
+        position: relative;
+
+        p {
+          /* margin-top: -3.8rem; */
+          margin-left: -0.6rem;
+          font-size: 8rem;
           color: #222;
         }
       }
@@ -52,7 +82,7 @@ export const BannerStyled = styled.section`
         /* overflow: hidden; */
 
         .img {
-          width: 90%;
+          width: 300px;
           height: 100%;
           position: relative;
           /* overflow: hidden; */
@@ -81,7 +111,7 @@ export const BannerStyled = styled.section`
         grid-row: 5/8;
 
         .img {
-          width: 90%;
+          width: 300px;
           height: 100%;
           transform-origin: bottom;
           height: 100%;
