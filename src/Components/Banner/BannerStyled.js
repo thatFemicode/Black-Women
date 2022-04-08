@@ -60,7 +60,7 @@ export const BannerStyled = styled.section`
         }
         @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
           grid-row: 2/5;
-          grid-column: 6/12;
+          grid-column: 7/12;
           width: 100%;
           height: 100%;
         }
@@ -75,6 +75,9 @@ export const BannerStyled = styled.section`
           grid-column: 4/7;
           grid-row: 2/7;
         }
+        @media (max-width: ${({ theme }) => theme.blogNav}) {
+          grid-row: 2/4;
+        }
 
         p {
           margin-top: -2rem;
@@ -88,14 +91,17 @@ export const BannerStyled = styled.section`
           @media (max-width: ${({ theme }) => theme.dont}) {
             font-size: 4.5rem;
           }
+          @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
+            font-size: 11vw;
+          }
           @media (max-width: ${({ theme }) => theme.nav}) {
             font-size: 4rem;
           }
           @media (max-width: ${({ theme }) => theme.desktop}) {
-            font-size: 3.5rem;
+            font-size: 5rem;
           }
-          @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
-            font-size: 11vw;
+          @media (max-width: ${({ theme }) => theme.blogNav}) {
+            font-size: 4rem;
           }
         }
       }
@@ -117,6 +123,8 @@ export const BannerStyled = styled.section`
           grid-row: 5/8;
         }
         @media (max-width: ${({ theme }) => theme.desktop}) {
+          grid-column: 2/7;
+          grid-row: 3/6;
         }
         @media screen and (min-height: 1000px) and (max-height: 1024px) and (max-width: 768px) {
           grid-column: 2/7;
@@ -138,16 +146,15 @@ export const BannerStyled = styled.section`
             font-size: 4rem;
             /* margin-top: -2rem; */
           }
-
+          @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
+            font-size: 10vw;
+          }
           @media (max-width: ${({ theme }) => theme.nav}) {
             font-size: 3.5rem;
           }
           @media (max-width: ${({ theme }) => theme.desktop}) {
-            /* margin-top: -4rem; */
+            margin-top: 2rem;
             font-size: 3rem;
-          }
-          @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
-            font-size: 10vw;
           }
         }
       }
@@ -173,14 +180,14 @@ export const BannerStyled = styled.section`
         }
         @media (max-width: ${({ theme }) => theme.desktop}) {
           grid-column: 1/6;
-          grid-row: 4/6;
+          grid-row: 5/6;
         }
         @media screen and (min-height: 1000px) and (max-height: 1024px) and (max-width: 768px) {
           grid-column: 1/6;
           grid-row: 4/6;
         }
-        @media (max-width: ${({ theme }) => theme.make}) {
-          grid-column: 3/13;
+        @media (max-width: ${({ theme }) => theme.blogNav}) {
+          grid-column: 1/7;
         }
 
         p {
@@ -195,7 +202,9 @@ export const BannerStyled = styled.section`
           @media (max-width: ${({ theme }) => theme.dont}) {
             font-size: 4.5rem;
           }
-
+          @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
+            font-size: 11vw;
+          }
           @media (max-width: ${({ theme }) => theme.mind}) {
             margin-top: 0;
           }
@@ -203,11 +212,11 @@ export const BannerStyled = styled.section`
             font-size: 4rem;
           }
           @media (max-width: ${({ theme }) => theme.desktop}) {
-            font-size: 3.5rem;
+            font-size: 5rem;
           }
-
-          @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
-            font-size: 11vw;
+          @media (max-width: ${({ theme }) => theme.blogNav}) {
+            margin-top: -4rem;
+            font-size: 4rem;
           }
         }
       }
@@ -267,10 +276,13 @@ export const BannerStyled = styled.section`
           background-repeat: no-repeat; */
 
           img {
-            border-radius: 2rem;
+            border-radius: 1rem;
             width: 100%;
             @media (max-width: ${({ theme }) => theme.pics}) {
               width: 230px;
+            }
+            @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
+              width: 100%;
             }
 
             /* height: 100%; */
@@ -331,7 +343,7 @@ export const BannerStyled = styled.section`
             width: 100%;
           }
           img {
-            border-radius: 2rem;
+            border-radius: 1rem;
             width: 100%;
             @media (max-width: ${({ theme }) => theme.pics}) {
               width: 230px;
