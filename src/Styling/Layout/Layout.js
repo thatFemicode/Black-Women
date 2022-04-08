@@ -9,10 +9,6 @@ export const OuterLayout = styled.section`
   margin: 0 auto;
   position: relative;
   /* padding: 3rem 2rem; */
-  @media (max-width: ${({ theme }) => theme.mins}) {
-    max-width: 1200px;
-    width: 100%;
-  }
   @media (max-width: ${({ theme }) => theme.mind}) {
     /* max-width: 900px; */
     width: 100%;
