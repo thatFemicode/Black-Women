@@ -16,11 +16,11 @@ export const bannerAnimation = (item1, item2, item3, item4, item5, item6) => {
     })
     .from(item3, {
       opacity: 0,
-      duration: 1,
+      duration: 0.4,
       yPercent: -200,
-      ease: 'Expo.easeInOut',
     })
     .from(item4, {
+      opacity: 0,
       yPercent: 100,
       scale: 1.3,
       delay: -1.5,

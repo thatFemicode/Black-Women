@@ -3,10 +3,7 @@ import { BannerStyled } from './BannerStyled';
 import SplitText from '../../utils/Split3.min';
 import { bannerAnimation } from './animation';
 import { OuterLayout } from '../../Styling/Layout/Layout';
-import Cee from './img/CeeCee.jpg';
-import Grass from './img/Grass.jpg';
 import Sisters from './img/Sisters.png';
-import Hair from './img/Hair.jpg';
 import Princess from './img/Princess.jpg';
 const Banner = () => {
   let message = useRef(null);
@@ -20,7 +17,6 @@ const Banner = () => {
       type: 'words',
       linesClass: 'lineChildren',
     });
-
     let line2 = spli.words;
     bannerAnimation(
       banner,
@@ -36,23 +32,31 @@ const Banner = () => {
       <OuterLayout>
         <div className="banner-main">
           <div className="banner-main-inner">
-            <div className="text">
-              <p ref={(el) => (message = el)}>Black</p>
-            </div>
-            <div className="text2">
-              <p ref={(el) => (message = el)}>Essence of</p>
-            </div>
-            <div className="text3">
-              <p ref={(el) => (message = el)}>Beauty</p>
-            </div>
-            <div ref={(el) => (containerRef = el)} className="texting">
-              <div ref={(el) => (imageRef = el)} className="img">
-                <img src={Princess} alt="" />
+            <div className="ban1">
+              <div className="main">
+                <div ref={(el) => (containerRef = el)} className="image">
+                  <div ref={(el) => (imageRef = el)} className="img">
+                    <img src={Princess} alt="" />
+                  </div>
+                </div>
+                <div className="text">
+                  <p ref={(el) => (message = el)}>Black</p>
+                </div>
               </div>
             </div>
-            <div ref={(el) => (containerRef2 = el)} className="texting2">
-              <div ref={(el) => (imageRef2 = el)} className="img">
-                <img src={Sisters} alt="" />
+            <div className="ban3">
+              <p>Essence of</p>
+            </div>
+            <div className="ban2">
+              <div className="main">
+                <div className="text">
+                  <p>Beauty</p>
+                </div>
+                <div className="image" ref={(el) => (containerRef2 = el)}>
+                  <div ref={(el) => (imageRef2 = el)} className="img">
+                    <img src={Sisters} alt="" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
