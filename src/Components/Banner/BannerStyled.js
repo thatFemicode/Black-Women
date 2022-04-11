@@ -12,6 +12,9 @@ export const BannerStyled = styled.section`
   &::-webkit-scrollbar {
     display: none;
   }
+  @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
+    height: 100%;
+  }
   @media (max-width: ${({ theme }) => theme.mins}) {
     padding-top: 4rem;
   }
@@ -50,7 +53,7 @@ export const BannerStyled = styled.section`
     &-inner {
       /* overflow: hidden; */
       width: 100%;
-      height: 100%;
+      height: 100vh;
       grid-area: 1/1;
       display: grid;
       justify-content: center;
@@ -61,6 +64,9 @@ export const BannerStyled = styled.section`
       @media (max-width: ${({ theme }) => theme.dont}) {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(6, 1fr);
+      }
+      @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
+        height: 100%;
       }
       -ms-overflow-style: none; /* Internet Explorer 10+ */
       scrollbar-width: none; /* Firefox */
@@ -98,6 +104,7 @@ export const BannerStyled = styled.section`
 
           .image {
             width: 100%;
+            height: 100%;
             .img {
               width: 100%;
               height: 100%;
@@ -194,7 +201,7 @@ export const BannerStyled = styled.section`
         @media (max-width: ${({ theme }) => theme.kobe}) {
           grid-column-start: 6;
           grid-column-end: 13;
-          grid-row: 7/13;
+          grid-row: 6/13;
         }
         @media (max-width: ${({ theme }) => theme.dont}) {
           grid-column-start: 3;
@@ -225,6 +232,7 @@ export const BannerStyled = styled.section`
           /* align-items: center; */
 
           .image {
+            height: 100%;
             .img {
               width: 100%;
               height: 100%;
@@ -241,7 +249,7 @@ export const BannerStyled = styled.section`
                 }
 
                 @media (max-width: ${({ theme }) => theme.kobe}) {
-                  width: 300px;
+                  width: 320px;
                 }
                 @media screen and (min-height: 600px) and (max-height: 800px) and (max-width: 1280px) {
                   width: 270px;
@@ -342,12 +350,16 @@ export const BannerStyled = styled.section`
           color: #222;
           @media (max-width: ${({ theme }) => theme.kobe}) {
             font-size: 3.5rem;
+            margin-top: -2rem;
           }
           @media screen and (min-height: 600px) and (max-height: 800px) and (max-width: 1280px) {
             font-size: 3.5rem;
           }
           @media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1024px) {
             font-size: 3rem;
+          }
+          @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
+            margin-top: 1rem;
           }
           @media (max-width: ${({ theme }) => theme.hero}) {
             font-size: 3rem;
@@ -357,6 +369,7 @@ export const BannerStyled = styled.section`
           }
           @media (max-width: ${({ theme }) => theme.desktop}) {
             font-size: 3rem;
+            margin-top: 0;
           }
           @media (max-width: ${({ theme }) => theme.make}) {
             font-size: 2rem;

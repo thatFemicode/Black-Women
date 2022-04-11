@@ -5,10 +5,17 @@ export const OuterLayout = styled.section`
   overflow-x: hidden;
   max-width: 1700px;
   width: 100%;
+  height: 100%;
   /* width: 70%; */
   margin: 0 auto;
   position: relative;
   /* padding: 3rem 2rem; */
+  overflow: hidden;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
   @media (max-width: ${({ theme }) => theme.mind}) {
     /* max-width: 900px; */
     width: 100%;

@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import Banner from '../../Components/Banner/Banner';
+import Hero from '../../Components/Hero/Hero';
 import Preloader from '../../Components/Preloader/Preloader';
 import { MainStyled } from '../../Styling/MainStyled';
 import { HomeStyled } from './HomeStyled';
 
-const Home = ({}) => {
+const Home = () => {
   const [loading, setLoading] = useState(true);
+
   return (
     <>
       {loading ? (
         <Preloader setLoading={setLoading} />
       ) : (
-        <HomeStyled>
+        <HomeStyled className="home-container">
           <MainStyled>
-            <Banner />
+            <Hero />
           </MainStyled>
         </HomeStyled>
       )}

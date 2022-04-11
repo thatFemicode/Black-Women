@@ -5,8 +5,4 @@ export const HomeStyled = styled.main`
   height: 100%;
   background-color: transparent;
   overflow-x: hidden;
-
-  /* background-color: #f0eff1; */
-  /* z-index: 4;
-  position: fixed; */
 `;

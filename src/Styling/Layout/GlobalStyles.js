@@ -56,7 +56,7 @@ body{
   position:relative;
   /* background-color:#000; */
 /* overflow: hidden; */
-background-color: #f0eff1;
+/* background-color: #f0eff1; */
 overflow-x: hidden;
 height:100%;
 width:100%;
