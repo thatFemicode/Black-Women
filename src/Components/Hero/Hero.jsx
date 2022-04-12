@@ -7,12 +7,11 @@ import { gsap } from 'gsap';
 import { OuterLayout } from '../../Styling/Layout/Layout';
 import Bottom from '../Bottom/Bottom';
 import Footer from '../Footer/Footer';
-import Features from '../Features/Features';
 
 const Hero = () => {
   let containerRef = useRef(null);
   useEffect(() => {
-    gsap.to(containerRef, { duration: 1, opacity: 1 });
+    gsap.to(containerRef, { duration: 0.1, opacity: 1 });
   });
   return (
     <HeroStyled ref={(el) => (containerRef = el)} className="hero-container">
@@ -25,7 +24,6 @@ const Hero = () => {
         <Bottom />
         <Footer />
       </OuterLayout>
-      <Features />
     </HeroStyled>
   );
 };

@@ -24,7 +24,7 @@ export const preloaderAnimation = (item1, item2, item3, item4, setLoading) => {
       ease: 'Expo.easeInOut',
     })
     .to(item1, {
-      duration: 0.7,
+      duration: 0.4,
       opacity: 0,
       display: 'none',
       ease: 'easeInOut',

@@ -10,7 +10,7 @@ const FeaturesSlide = ({ title, description, updateActiveImage, index }) => {
       console.log(index);
       updateActiveImage(index);
     }
-  }, [onScreen, index]);
+  }, [onScreen, index, updateActiveImage]);
 
   return (
     <div ref={ref} className="feature-slide">

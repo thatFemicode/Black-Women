@@ -44,7 +44,7 @@ const Bottom = () => {
         </p>
       </div>
       <div className="hero-usedBy-logos">
-        <Link to="/story">
+        <Link to="/gallery">
           <ItemButton name={'View more'} />
         </Link>
         <img src={Gens} alt="" />
