@@ -54,11 +54,11 @@ const PageGallery = () => {
             { duration: 0.2, opacity: 0 },
             'elements-in-out'
           )
-          .set(
-            bgImageRefs.current[i + 1],
-            { scale: 1.2, webkitFilter: 'blur(' + 6 + 'px)' },
-            'elements-in-out'
-          )
+          // .set(
+          //   bgImageRefs.current[i + 1],
+          //   { scale: 1.2, webkitFilter: 'blur(' + 6 + 'px)' },
+          //   'elements-in-out'
+          // )
           .to(
             bgImageRefs.current[i + 1],
             { duration: 1.8, scale: 1, webkitFilter: 'blur(' + 0 + 'px)' },
