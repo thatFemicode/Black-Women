@@ -24,8 +24,8 @@ const PageGallery = () => {
       },
     });
 
-    gsap.set(textRefs, { x: -30 });
-    gsap.set(textRefs[0], { opacity: 1 });
+    gsap.set(textRefs.current, { x: -30 });
+    gsap.set(textRefs.current[0], { opacity: 1 });
 
     slideData.forEach((_slide, i) => {
       if (i < slideData.length - 1) {
@@ -40,28 +40,40 @@ const PageGallery = () => {
           .set(dynamicBar.current, { transformOrigin: 'top center' })
           .add('elements-in-out')
           .to(
-            [countTopRefs[i], countBottomRefs[i]],
+            [countTopRefs.current[i], countBottomRefs.current[i]],
             { opacity: 0 },
             'elements-in-out'
           )
           .to(
-            [countTopRefs[i + 1], countBottomRefs[i + 1]],
-            { opacity: 1 },
+            [countTopRefs.current[i + 1], countBottomRefs.current[i + 1]],
+            { opacity: 0 },
             'elements-in-out'
           )
-          .to(bgImageRefs[i], { duration: 0.2, opacity: 0 }, 'elements-in-out')
+          .to(
+            bgImageRefs.current[i],
+            { duration: 0.2, opacity: 0 },
+            'elements-in-out'
+          )
           .set(
-            bgImageRefs[i + 1],
+            bgImageRefs.current[i + 1],
             { scale: 1.2, webkitFilter: 'blur(' + 6 + 'px)' },
             'elements-in-out'
           )
           .to(
-            bgImageRefs[i + 1],
+            bgImageRefs.current[i + 1],
             { duration: 1.8, scale: 1, webkitFilter: 'blur(' + 0 + 'px)' },
             'elements-in-out'
           )
-          .to(textRefs[i], { duration: 0.3, opacity: 0 }, 'elements-in-out')
-          .to(textRefs[i + 1], { duration: 0.8, opacity: 1, x: 0 }, '-=1');
+          .to(
+            textRefs.current[i],
+            { duration: 0.3, opacity: 0 },
+            'elements-in-out'
+          )
+          .to(
+            textRefs.current[i + 1],
+            { duration: 0.8, opacity: 1, x: 0 },
+            '-=1'
+          );
       } else {
         tl.fromTo(
           dynamicBar.current,
@@ -74,7 +86,7 @@ const PageGallery = () => {
           .set(dynamicBar.current, { transformOrigin: 'top center' })
           .add('elements-in-out')
           .to(
-            [countTopRefs[i], countBottomRefs[i]],
+            [countTopRefs.current[i], countBottomRefs.current[i]],
             { opacity: 0 },
             'elements-in-out'
           );
@@ -86,7 +98,7 @@ const PageGallery = () => {
   };
 
   const repeatBeginning = (tlRepeat) => {
-    gsap.set(bgImageRefs[0], {
+    gsap.set(bgImageRefs.current[0], {
       opacity: 0,
       scale: 1.2,
       webkitFilter: 'blur(' + 6 + 'px)',
@@ -95,13 +107,13 @@ const PageGallery = () => {
     tlRepeat
       .add('slide1-in')
       .fromTo(
-        [countTopRefs[0], countBottomRefs[0]],
+        [countTopRefs.current[0], countBottomRefs.current[0]],
         { opacity: 0 },
         { duration: 0.3, opacity: 1, ease: 'Power2.easeIn' },
         'slide1-in'
       )
       .to(
-        bgImageRefs[0],
+        bgImageRefs.current[0],
         {
           duration: 1.8,
           scale: 1,
@@ -111,7 +123,7 @@ const PageGallery = () => {
         'slide1-in'
       )
       .fromTo(
-        textRefs[0],
+        textRefs.current[0],
         { opacity: 0, x: -30, ease: 'Power2.easeIn' },
         { duration: 0.8, opacity: 1, x: 0 },
         '-=1'
@@ -124,18 +136,18 @@ const PageGallery = () => {
   return (
     <PageGalleryStyled>
       {slideData.map((slide, index) => (
-        <Slide
+        <GallerySlider
           key={index}
           data={slide}
           ref={{
             slideRef: (ref) => {
-              slideRefs[index] = ref;
+              slideRefs.current[index] = ref;
             },
             imageRef: (ref) => {
-              bgImageRefs[index] = ref;
+              bgImageRefs.current[index] = ref;
             },
             textRef: (ref) => {
-              textRefs[index] = ref;
+              textRefs.current[index] = ref;
             },
           }}
         />
@@ -147,7 +159,7 @@ const PageGallery = () => {
               key={index}
               className="count count--top"
               ref={(ref) => {
-                countTopRefs[index] = ref;
+                countTopRefs.current[index] = ref;
               }}
             >
               {(index + 1).toString().padStart(2, '0')}
@@ -166,7 +178,7 @@ const PageGallery = () => {
                   key={index}
                   className="count count--bottom"
                   ref={(ref) => {
-                    countBottomRefs[index] = ref;
+                    countBottomRefs.current[index] = ref;
                   }}
                 >
                   {(index + 2).toString().padStart(2, '0')}
@@ -178,7 +190,7 @@ const PageGallery = () => {
                   key={index}
                   className="count count--bottom"
                   ref={(ref) => {
-                    countBottomRefs[index] = ref;
+                    countBottomRefs.current[index] = ref;
                   }}
                 >
                   01

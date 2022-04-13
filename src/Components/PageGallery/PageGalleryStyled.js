@@ -1,22 +1,20 @@
 import styled from 'styled-components';
 
 export const PageGalleryStyled = styled.div`
-  /* background-color: #000; */
   height: 100vh;
   width: 100%;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
   overflow: hidden;
   position: relative;
 
+  /* mix-blend-mode: difference; */
   .slider__slide {
     width: 100%;
     height: 100%;
+    /* overflow: hidden; */
     display: flex;
-    position: absolute;
     top: 0;
     left: 0;
+    position: absolute;
   }
   /* .slider__slide--1 {
   z-index: 4;
@@ -33,7 +31,7 @@ export const PageGalleryStyled = styled.div`
   .slider__img {
     width: 100%;
     height: 100%;
-    position: absolute;
+    /* position: absolute; */
     z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
@@ -95,18 +93,18 @@ export const PageGalleryStyled = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-  .slider .count--top {
+  .count--top {
     position: absolute;
     top: 0;
     left: 0;
   }
-  .slider .count {
+  .count {
     opacity: 0;
   }
-  .slider .count:first-child {
-    opacity: 1;
+  .count:first-child {
+    opacity: 0;
   }
-  .slider .count--bottom {
+  .count--bottom {
     position: absolute;
     bottom: 0;
     left: 0;
