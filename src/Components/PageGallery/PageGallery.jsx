@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef, useCallback } from 'react';
 import slideData from './data';
 import { PageGalleryStyled } from './PageGalleryStyled';
 import { gsap } from 'gsap';
@@ -6,18 +6,16 @@ import GallerySlider from '../GallerySlider/GallerySlider';
 
 const PageGallery = () => {
   const slideRefs = useRef([]);
-  const countTopRefs = useRef([]);
-  const countBottomRefs = useRef([]);
   const bgImageRefs = useRef([]);
   const textRefs = useRef([]);
   const dynamicBar = useRef(undefined);
 
-  const startAnimation = () => {
+  const startAnimation = useCallback(() => {
     console.log('I am called~startAnimation');
     const tlRepeat = gsap.timeline();
     const tl = gsap.timeline({
       repeat: -1,
-      delay: 1,
+      delay: 0,
       paused: false,
       onRepeat: () => {
         repeatBeginning(tlRepeat);
@@ -39,26 +37,13 @@ const PageGallery = () => {
           .to(dynamicBar.current, { duration: 1, scaleY: 0 }, '+=0.4')
           .set(dynamicBar.current, { transformOrigin: 'top center' })
           .add('elements-in-out')
-          .to(
-            [countTopRefs.current[i], countBottomRefs.current[i]],
-            { opacity: 0 },
-            'elements-in-out'
-          )
-          .to(
-            [countTopRefs.current[i + 1], countBottomRefs.current[i + 1]],
-            { opacity: 0 },
-            'elements-in-out'
-          )
+
           .to(
             bgImageRefs.current[i],
             { duration: 0.2, opacity: 0 },
             'elements-in-out'
           )
-          // .set(
-          //   bgImageRefs.current[i + 1],
-          //   { scale: 1.2, webkitFilter: 'blur(' + 6 + 'px)' },
-          //   'elements-in-out'
-          // )
+
           .to(
             bgImageRefs.current[i + 1],
             { duration: 1.8, scale: 1, webkitFilter: 'blur(' + 0 + 'px)' },
@@ -84,34 +69,20 @@ const PageGallery = () => {
           .set(dynamicBar.current, { transformOrigin: 'bottom center' })
           .to(dynamicBar.current, { duration: 1, scaleY: 0 }, '+=0.4')
           .set(dynamicBar.current, { transformOrigin: 'top center' })
-          .add('elements-in-out')
-          .to(
-            [countTopRefs.current[i], countBottomRefs.current[i]],
-            { opacity: 0 },
-            'elements-in-out'
-          );
+          .add('elements-in-out');
       }
     });
-
-    console.log('tl', tl);
-    console.log('tlRepeat', tlRepeat);
-  };
+  }, []);
 
   const repeatBeginning = (tlRepeat) => {
     gsap.set(bgImageRefs.current[0], {
       opacity: 0,
-      scale: 1.2,
+      scale: 1,
       webkitFilter: 'blur(' + 6 + 'px)',
     });
 
     tlRepeat
       .add('slide1-in')
-      .fromTo(
-        [countTopRefs.current[0], countBottomRefs.current[0]],
-        { opacity: 0 },
-        { duration: 0.3, opacity: 1, ease: 'Power2.easeIn' },
-        'slide1-in'
-      )
       .to(
         bgImageRefs.current[0],
         {
@@ -129,9 +100,9 @@ const PageGallery = () => {
         '-=1'
       );
   };
-  useEffect(() => {
+  useLayoutEffect(() => {
     startAnimation();
-  }, []);
+  }, [startAnimation]);
 
   return (
     <PageGalleryStyled>
@@ -153,79 +124,13 @@ const PageGallery = () => {
         />
       ))}
       <div className="slider__navigation">
-        <div className="slider__count slider__count--top">
-          {slideData.map((_slide, index) => (
-            <p
-              key={index}
-              className="count count--top"
-              ref={(ref) => {
-                countTopRefs.current[index] = ref;
-              }}
-            >
-              {(index + 1).toString().padStart(2, '0')}
-            </p>
-          ))}
-        </div>
         <div className="slider__bar">
           <div ref={dynamicBar} className="slider__bar--dynamic" />
           <div className="slider__bar--static" />
         </div>
-        <div className="slider__count slider__count--bottom">
-          {slideData.map((_slide, index) => {
-            if (index < slideData.length - 1) {
-              return (
-                <p
-                  key={index}
-                  className="count count--bottom"
-                  ref={(ref) => {
-                    countBottomRefs.current[index] = ref;
-                  }}
-                >
-                  {(index + 2).toString().padStart(2, '0')}
-                </p>
-              );
-            } else {
-              return (
-                <p
-                  key={index}
-                  className="count count--bottom"
-                  ref={(ref) => {
-                    countBottomRefs.current[index] = ref;
-                  }}
-                >
-                  01
-                </p>
-              );
-            }
-          })}
-        </div>
-      </div>{' '}
+      </div>
     </PageGalleryStyled>
   );
 };
 
 export default PageGallery;
-
-const Slide = React.forwardRef((props, ref) => {
-  const { data } = props;
-  const { slideRef, imageRef, textRef } = ref;
-  return (
-    <div
-      ref={slideRef}
-      className="slider__slide"
-      style={{ zIndex: data.zIndex }}
-    >
-      <div
-        ref={imageRef}
-        className="slider__img"
-        style={{ backgroundImage: `url(${data.imageUrl})` }}
-      ></div>
-      <div className="slider__text" ref={textRef}>
-        <h1 className="slider__header">{data.headerText}</h1>
-        <a href={data.link} className="cta">
-          {data.linkText}
-        </a>
-      </div>
-    </div>
-  );
-});

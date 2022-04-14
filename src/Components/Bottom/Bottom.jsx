@@ -14,8 +14,8 @@ const Bottom = () => {
       scrollTrigger: {
         trigger: phoneRef.current,
         start: '300px',
-        end: '+=300',
-        // toggleActions: 'play none none none',
+        end: '+=500',
+
         scrub: true,
         // markers: true,
       },

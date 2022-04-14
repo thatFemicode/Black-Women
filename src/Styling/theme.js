@@ -23,7 +23,7 @@ export const theme = {
   desktop: '769px',
   desk: '700px',
   player: '751px',
-  dont: '1025px',
+  dont: '1023px',
   service: '900px',
   balls: '930px',
   post: '940px',

@@ -1,11 +1,14 @@
 import React from 'react';
 import PageGallery from '../../Components/PageGallery/PageGallery';
 import { GalleryStyled } from './GalleryStyled';
+import { OuterLayout } from '../../Styling/Layout/Layout';
 
 const Gallery = () => {
   return (
     <GalleryStyled>
-      <PageGallery />
+      <OuterLayout>
+        <PageGallery />
+      </OuterLayout>
     </GalleryStyled>
   );
 };

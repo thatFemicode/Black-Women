@@ -4,7 +4,7 @@ import female from './img/female.jpg';
 import grandmum from './img/grandmum.jpg';
 import hair1 from './img/hair.jpg';
 import hair2 from './img/hairs.jpg';
-
+import cee from './img/CeeCee.jpg';
 const slideData = [
   {
     id: 1,
@@ -17,7 +17,7 @@ const slideData = [
   {
     id: 2,
     zIndex: 5,
-    imageUrl: female,
+    imageUrl: cee,
     headerText: 'Professonial, trust-worthy, and compassionate.',
     link: '#',
     linkText: 'learn more',

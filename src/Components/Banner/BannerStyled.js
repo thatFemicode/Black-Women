@@ -25,6 +25,10 @@ export const BannerStyled = styled.section`
   @media (max-width: ${({ theme }) => theme.desktop}) {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    padding-top: 4rem;
+  }
+  @media (max-width: ${({ theme }) => theme.make}) {
+    padding-top: 2rem;
   }
   @media (max-width: ${({ theme }) => theme.min}) {
     padding-left: 1rem;
@@ -249,7 +253,7 @@ export const BannerStyled = styled.section`
                 }
 
                 @media (max-width: ${({ theme }) => theme.kobe}) {
-                  width: 320px;
+                  width: 300px;
                 }
                 @media screen and (min-height: 600px) and (max-height: 800px) and (max-width: 1280px) {
                   width: 270px;
