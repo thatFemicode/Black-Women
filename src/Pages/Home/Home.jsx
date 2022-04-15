@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Hero from '../../Components/Hero/Hero';
+import Navbar from '../../Components/Navbar/Navbar';
 import Preloader from '../../Components/Preloader/Preloader';
 import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 import { MainStyled } from '../../Styling/MainStyled';
@@ -15,6 +16,7 @@ const Home = () => {
       ) : (
         <HomeStyled className="home-container">
           <MainStyled>
+            <Navbar />
             <ScrollToTop />
             <Hero />
           </MainStyled>

@@ -3,7 +3,7 @@ import frame from './img/frame.png';
 export const BlockStyled = styled.div`
   width: 350px;
   height: 650px;
-  top: 300px;
+  top: 400px;
   position: relative;
   transform: scale(1.2);
 
@@ -17,7 +17,7 @@ export const BlockStyled = styled.div`
   @media (max-width: ${({ theme }) => theme.dont}) {
     width: 250px;
     height: 450px;
-    top: 350px;
+    top: 450px;
   }
   @media screen and (min-height: 1000px) and (max-height: 1024px) and (max-width: 768px) {
     width: 250px;
@@ -26,15 +26,15 @@ export const BlockStyled = styled.div`
   @media (max-width: ${({ theme }) => theme.make}) {
     width: 170px;
     height: 350px;
-    top: 250px;
+    top: 330px;
   }
-  /* overflow: hidden; */
+
   .hero-phone-template {
     background-image: url(${frame});
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    /* width: 100%; */
+
     height: 100%;
     overflow: hidden;
     img {

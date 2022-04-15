@@ -3,7 +3,8 @@ import slideData from './data';
 import { PageGalleryStyled } from './PageGalleryStyled';
 import { gsap } from 'gsap';
 import GallerySlider from '../GallerySlider/GallerySlider';
-
+import CircularButton from '../Button/CircularButton';
+import { Link } from 'react-router-dom';
 const PageGallery = () => {
   const slideRefs = useRef([]);
   const bgImageRefs = useRef([]);
@@ -11,7 +12,6 @@ const PageGallery = () => {
   const dynamicBar = useRef(undefined);
 
   const startAnimation = useCallback(() => {
-    console.log('I am called~startAnimation');
     const tlRepeat = gsap.timeline();
     const tl = gsap.timeline({
       repeat: -1,
@@ -123,10 +123,18 @@ const PageGallery = () => {
           }}
         />
       ))}
-      <div className="slider__navigation">
-        <div className="slider__bar">
-          <div ref={dynamicBar} className="slider__bar--dynamic" />
-          <div className="slider__bar--static" />
+      <div className="navigation">
+        <div className="slider__navigation">
+          <div className="slider__bar">
+            <div ref={dynamicBar} className="slider__bar--dynamic" />
+            <div className="slider__bar--static" />
+          </div>
+        </div>
+        <div className="home-navigation">
+          <p>You all are the real MVP's!!</p>
+          <Link to="/">
+            <CircularButton name={'home'} />
+          </Link>
         </div>
       </div>
     </PageGalleryStyled>

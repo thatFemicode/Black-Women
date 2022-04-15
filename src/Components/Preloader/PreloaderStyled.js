@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const PreloaderStyled = styled.div`
-  background: #333;
+  background: #000;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -12,7 +12,7 @@ export const PreloaderStyled = styled.div`
   .progress {
     position: absolute;
     left: 0;
-    background-color: #f0eff1;
+    background-color: #fff;
     height: 2px;
     width: ${({ width }) => `${width}%`};
     transition: width 0.4s ease-out;
@@ -21,7 +21,7 @@ export const PreloaderStyled = styled.div`
 
   .load {
     position: absolute;
-    background-color: #f0eff1;
+    background-color: #fff;
     height: 2px;
     width: 0;
     left: 0;
@@ -31,17 +31,27 @@ export const PreloaderStyled = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    /* mix-blend-mode: difference; */
     width: 100%;
     color: #444;
     text-align: center;
-    font-size: 2vw;
-    transform: translate(-50%, -50%);
-    /* color: var(--burlywood);
-    font-size: calc(var(--VW) * 2); */
+    font-size: 5rem;
     z-index: 31;
-    @media (hover: none) and (pointer: coarse), (max-width: 500px) {
-      /* font-size: calc(var(--VW) * 4); */
+    max-width: 100%;
+    transform: translate(-50%, -50%);
+    @media (max-width: ${({ theme }) => theme.kobe}) {
+      font-size: 4rem;
+    }
+    @media (max-width: ${({ theme }) => theme.dont}) {
+      font-size: 3rem;
+    }
+    @media (max-width: ${({ theme }) => theme.desktop}) {
+      font-size: 3rem;
+    }
+    @media (max-width: ${({ theme }) => theme.make}) {
+      font-size: 2rem;
+    }
+    @media (max-width: ${({ theme }) => theme.mobil}) {
+      font-size: 1.5rem;
     }
   }
 `;

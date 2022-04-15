@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const GalleryStyled = styled.main`
   width: 100%;
   height: 100%;
+  opacity: 0;
   overflow: hidden;
   padding: 0 2rem;
   padding-top: 4rem;

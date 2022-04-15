@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const PageGalleryStyled = styled.div`
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +11,11 @@ export const PageGalleryStyled = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-
+  overflow: hidden;
+  .navigation {
+    height: 100%;
+    width: 100%;
+  }
   .slider__navigation {
     width: 20px;
     height: 400px;
@@ -25,7 +29,41 @@ export const PageGalleryStyled = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-
+  .home-navigation {
+    position: fixed;
+    bottom: 0%;
+    right: 100px;
+    z-index: 12;
+    display: flex;
+    width: 600px;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    @media screen and (min-height: 600px) and (max-height: 880px) and (max-width: 1280px) {
+      right: 50px;
+      bottom: -5%;
+      width: 550px;
+    }
+    @media (max-width: ${({ theme }) => theme.blogNav}) {
+      width: 100%;
+      right: 0;
+    }
+    @media (max-width: ${({ theme }) => theme.mobil}) {
+      bottom: -20px;
+    }
+    p {
+      font-size: 2rem;
+      @media (max-width: ${({ theme }) => theme.dont}) {
+        font-size: 1.5rem;
+      }
+      @media (max-width: ${({ theme }) => theme.blogNav}) {
+        font-size: 1.4rem;
+      }
+      @media (max-width: ${({ theme }) => theme.make}) {
+        font-size: 1rem;
+      }
+    }
+  }
   .slider__bar {
     width: 2px;
     height: 250px;

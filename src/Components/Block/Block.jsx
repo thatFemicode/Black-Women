@@ -15,7 +15,7 @@ const Block = () => {
   useEffect(() => {
     function intro() {
       const tl = gsap.timeline({ delay: 2 });
-      tl.fromTo(phoneRef.current, { y: 100 }, { duration: 1, y: 0 });
+      tl.fromTo(phoneRef.current, { y: 100 }, { duration: 1, y: 20 });
       return tl;
     }
 

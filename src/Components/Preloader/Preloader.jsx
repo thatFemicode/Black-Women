@@ -5,7 +5,6 @@ import { PreloaderStyled } from './PreloaderStyled';
 const Preloader = ({ setLoading }) => {
   const [width, setWidth] = useState(0);
   const [mess, setMess] = useState('');
-
   let preloader = useRef(null);
   let load = useRef(null);
   let bg = useRef(null);
@@ -24,7 +23,7 @@ const Preloader = ({ setLoading }) => {
     setMess(messages[randomNum]);
   };
   useEffect(() => {
-    const count = setInterval(() => {
+    let count = setInterval(() => {
       setWidth((loading) => {
         if (loading < 100) {
           setWidth(loading + 1);
@@ -37,6 +36,7 @@ const Preloader = ({ setLoading }) => {
 
     generateMessage();
     preloaderAnimation(preloader, load, bg, message, setLoading);
+    return () => clearInterval(count);
   }, [setLoading]);
   return (
     <PreloaderStyled ref={(el) => (preloader = el)} width={width}>

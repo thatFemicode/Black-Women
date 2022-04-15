@@ -2,22 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 // import bg from "./Pages/Marketplace/img/noise.png";
 const GlobalStyle = createGlobalStyle`
 
-:root {
-  /* dark shades of primary color*/
-  --transition: all 0.3s linear;
-  --white: #fff;
-  --maroon:#83333e;
-  --off-white:#f2f4f5;
-  --black:#000;
-  --grey: #f1f4f8b0;
-  --dark-grey: #6b7c93;
-  --green: #24b47e;
-  --teal: #4F96CE;
-  --blue: #6772e5;
-  --dark-blue: #4F3EF5;
-  --spacer: 28px;
-  --main-color: #3664e8;
-}
+
 *{
     margin: 0;
     padding: 0;
@@ -87,11 +72,7 @@ li{
          overflow:auto
           }
 }
-/* .no-scroll{
-  height:100vh;
-  overflow:hidden;
-} */
-/
+
 .load-screen1 {
   position: relative;
   padding-top: 0px;

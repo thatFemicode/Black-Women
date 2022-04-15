@@ -1,13 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CustomCursorStyled = styled.div`
-  background-color: red;
+  @media (hover: none) and (pointer: coarse), (max-width: 500px) {
+    display: none;
+  }
   .cursor {
     position: absolute;
     background-color: #333;
-    mix-blend-mode:difference;
-    width: 6px;
-    height: 6px;
+    mix-blend-mode: difference;
+    width: 10px;
+    height: 10px;
     border-radius: 100%;
     z-index: 6;
     transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
@@ -28,7 +30,7 @@ export const CustomCursorStyled = styled.div`
     position: absolute;
     /* background-color: rgba(255, 255, 255, 0.3); */
     background-color: #333;
-    mix-blend-mode:difference;
+    mix-blend-mode: difference;
     width: 20px;
     height: 20px;
     border-radius: 100%;

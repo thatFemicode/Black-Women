@@ -15,10 +15,7 @@ const GallerySlider = forwardRef((props, ref) => {
       </div>
       <div className="slider__text" ref={textRef}>
         <h1 className="slider__header">{data.headerText}</h1>
-        <a href={data.link} className="cta">
-          {data.linkText}
-        </a>
-      </div>{' '}
+      </div>
     </GallerySliderStyled>
   );
 });

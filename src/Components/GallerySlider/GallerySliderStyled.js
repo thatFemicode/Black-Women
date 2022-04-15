@@ -75,7 +75,7 @@ export const GallerySliderStyled = styled.div`
     }
     @media (max-width: ${({ theme }) => theme.mobil}) {
       width: 280px;
-      height: 320px;
+      height: 289px;
     }
   }
   .slider__text {

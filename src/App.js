@@ -5,7 +5,7 @@ import { theme } from './Styling/theme';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Gallery from './Pages/Gallery/Gallery';
-import Story from './Pages/Story/Story';
+// import Story from './Pages/Story/Story';
 import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 function App() {

@@ -19,8 +19,8 @@ const Footer = () => {
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: footerRef.current,
-        start: 'top center',
-        // end: '+=300',
+        start: 'top bottom',
+        end: '+=300',
         // toggleActions: 'play none none none',
         // scrub: true,
         // markers: true,
@@ -28,11 +28,11 @@ const Footer = () => {
     });
 
     tl.from(line2, {
-      duration: 3,
+      duration: 2,
       opacity: 0,
-      y: 200,
+      y: 100,
       ease: 'power4.out',
-      stagger: 0.2,
+      stagger: 0.1,
     });
     return () => tl.scrollTrigger.kill();
   }, []);
@@ -41,7 +41,7 @@ const Footer = () => {
       <h1 className="text" ref={text}>
         You are beautiful, strong, bold and Dont ever doubt yourself{' '}
       </h1>
-      <ItemButton name={'View more'} />
+      <ItemButton name={'Gallery'} />
     </FooterStyled>
   );
 };

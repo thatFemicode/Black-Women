@@ -14,7 +14,7 @@ const Bottom = () => {
       scrollTrigger: {
         trigger: phoneRef.current,
         start: '300px',
-        end: '+=500',
+        end: '+=400',
 
         scrub: true,
         // markers: true,
@@ -45,7 +45,7 @@ const Bottom = () => {
       </div>
       <div className="hero-usedBy-logos">
         <Link to="/gallery">
-          <ItemButton name={'View more'} />
+          <ItemButton name={'Gallery'} />
         </Link>
         <img src={Gens} alt="" />
       </div>

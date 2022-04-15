@@ -5,8 +5,9 @@ export const BannerStyled = styled.section`
   overflow: hidden;
   width: 100%;
   opacity: 0;
+  position: relative;
   padding: 0 2rem;
-  padding-top: 4rem;
+  padding-top: 5rem;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
   &::-webkit-scrollbar {
@@ -27,19 +28,27 @@ export const BannerStyled = styled.section`
     padding-right: 1.5rem;
     padding-top: 4rem;
   }
-  @media (max-width: ${({ theme }) => theme.make}) {
-    padding-top: 2rem;
-  }
+
   @media (max-width: ${({ theme }) => theme.min}) {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
+  .banner-button {
+    z-index: 1;
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    @media (max-width: ${({ theme }) => theme.desktop}) {
+      top: 550px;
+      left: 20px;
+    }
+  }
   .banner-main {
     display: grid;
     height: 100%;
     width: 100%;
     padding: 3rem 0;
+    position: relative;
     overflow: hidden;
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
@@ -50,10 +59,7 @@ export const BannerStyled = styled.section`
       height: 100vh;
       padding: 2rem 0;
     }
-    @media (max-width: ${({ theme }) => theme.min}) {
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
+
     &-inner {
       /* overflow: hidden; */
       width: 100%;
@@ -99,7 +105,7 @@ export const BannerStyled = styled.section`
           grid-column: 1/5;
         }
         @media (max-width: ${({ theme }) => theme.mobil}) {
-          grid-column: 1/7;
+          grid-column: 1/6;
         }
         .main {
           width: 100%;
@@ -142,11 +148,9 @@ export const BannerStyled = styled.section`
                 @media (max-width: ${({ theme }) => theme.make}) {
                   width: 140px;
                 }
-                /* @media (max-width: ${({ theme }) => theme.desktop}) {
-                width: 190px;
-              } */
+
                 @media (max-width: ${({ theme }) => theme.mobil}) {
-                  font-size: 90px;
+                  width: 120px;
                 }
               }
             }
@@ -161,6 +165,7 @@ export const BannerStyled = styled.section`
             @media (max-width: ${({ theme }) => theme.desktop}) {
               align-self: center;
             }
+
             p {
               font-size: 7rem;
               color: #222;
@@ -225,9 +230,7 @@ export const BannerStyled = styled.section`
         @media (max-width: ${({ theme }) => theme.make}) {
           grid-column: 2/7;
         }
-        @media (max-width: ${({ theme }) => theme.mobil}) {
-          grid-column: 1/7;
-        }
+
         .main {
           width: 100%;
           display: flex;
@@ -275,16 +278,14 @@ export const BannerStyled = styled.section`
                   width: 140px;
                 }
                 @media (max-width: ${({ theme }) => theme.mobil}) {
-                  font-size: 100px;
+                  width: 120px;
                 }
               }
             }
           }
           .text {
             flex: 1;
-            @media (max-width: ${({ theme }) => theme.image}) {
-              /* align-self: flex-end; */
-            }
+
             @media (max-width: ${({ theme }) => theme.desktop}) {
               align-self: center;
             }
@@ -307,9 +308,7 @@ export const BannerStyled = styled.section`
               @media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1024px) {
                 font-size: 4rem;
               }
-              @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
-                /* font-size: 11vw; */
-              }
+
               @media (max-width: ${({ theme }) => theme.hero}) {
                 font-size: 3.5rem;
               }
@@ -380,7 +379,6 @@ export const BannerStyled = styled.section`
           }
           @media (max-width: ${({ theme }) => theme.mobil}) {
             font-size: 2rem;
-            margin-top: 2rem;
           }
         }
       }

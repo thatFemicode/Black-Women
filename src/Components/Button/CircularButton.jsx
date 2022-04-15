@@ -1,23 +1,16 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { bounce } from './animtion';
-
 const ButtonStyled = styled.button`
-  font-size: 1.4rem;
-  padding: 0.25rem 0.85rem;
-  border-radius: 9px 0 9px 0px;
-  border-color: transparent;
-  color: #000;
-  background-color: #fff;
-  mix-blend-mode: difference;
-  cursor: none;
   font-size: 1.3rem;
   padding: 0.25rem 0.85rem;
   border-radius: 50%;
   border-color: transparent;
+  color: #fff;
+  background-color: #000;
   cursor: none;
   text-transform: capitalize;
-  /* display: inline-flex; */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
@@ -29,16 +22,8 @@ const ButtonStyled = styled.button`
     font-size: 0.8rem;
     padding: 0.15rem 0.65rem;
   }
-
-  @media (max-width: ${({ theme }) => theme.mobil}) {
-    font-size: 0.9rem;
-  }
-  @media (max-width: ${({ theme }) => theme.se}) {
-    font-size: 0.7rem;
-    padding: 0.15rem 0.55rem;
-  }
 `;
-const ItemButton = ({ name }) => {
+const CircularButton = ({ name }) => {
   let icon = useRef(null);
   useEffect(() => {
     bounce(icon);
@@ -54,4 +39,4 @@ const ItemButton = ({ name }) => {
   );
 };
 
-export default ItemButton;
+export default CircularButton;

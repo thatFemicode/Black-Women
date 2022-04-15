@@ -1,15 +1,11 @@
 import styled from 'styled-components';
 
 export const CollageStyled = styled.div`
+  margin-bottom: 10vh;
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-columns: 35% 1fr 35%;
-  padding: 0 2rem;
-  padding-top: 100px;
-  place-items: center;
-  align-items: start;
-  margin-bottom: 10vh;
+  text-align: center;
+  /* padding-top: 4rem; */
   @media (max-width: ${({ theme }) => theme.kobe}) {
     padding-top: 2rem;
   }
@@ -27,9 +23,38 @@ export const CollageStyled = styled.div`
     padding-right: 1rem;
   }
 
+  h1 {
+    font-size: 3.5rem;
+    width: 100%;
+    color: #222;
+    font-weight: 500;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px;
+    text-transform: capitalize;
+    @media (max-width: ${({ theme }) => theme.kobe}) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: ${({ theme }) => theme.desktop}) {
+      font-size: 2rem;
+    }
+    @media (max-width: ${({ theme }) => theme.make}) {
+      font-size: 1.5rem;
+    }
+  }
+  .collage-main {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35% 1fr 35%;
+    padding: 0 2rem;
+    padding-top: 100px;
+    place-items: center;
+    align-items: start;
+  }
   .left-column {
-    /* grid-area: 1 / 1 / span 1 / span 1; */
-    grid-row: 1/2;
+    grid-area: 1 / 1 / span 1 / span 1;
+    /* grid-row: 1/2; */
   }
   .right-column {
     grid-area: 1 / 3 / span 1 / span 1;
