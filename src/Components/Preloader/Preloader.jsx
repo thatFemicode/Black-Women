@@ -7,7 +7,6 @@ const Preloader = ({ setLoading }) => {
   const [mess, setMess] = useState('');
   let preloader = useRef(null);
   let load = useRef(null);
-  let bg = useRef(null);
   let message = useRef(null);
   // let text1 = useRef(null);
   const generateMessage = () => {
@@ -35,14 +34,13 @@ const Preloader = ({ setLoading }) => {
     }, 40);
 
     generateMessage();
-    preloaderAnimation(preloader, load, bg, message, setLoading);
+    preloaderAnimation(preloader, load, message, setLoading);
     return () => clearInterval(count);
   }, [setLoading]);
   return (
     <PreloaderStyled ref={(el) => (preloader = el)} width={width}>
       <div ref={(el) => (load = el)} className="load"></div>
       <div className="progress"></div>
-      <div ref={(el) => (bg = el)} className="yellow-bg"></div>
       <div ref={(el) => (message = el)} className="message">
         {mess}
       </div>

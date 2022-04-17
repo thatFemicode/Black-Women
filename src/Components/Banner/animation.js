@@ -21,7 +21,6 @@ export const bannerAnimation = (
       skewX: 30,
       opacity: 0,
       autoAlpha: 1,
-      // stagger: 0.9,
       ease: 'power2.out',
     })
     .from(item3, {
@@ -42,7 +41,6 @@ export const bannerAnimation = (
       skewX: 30,
       opacity: 0,
       autoAlpha: 1,
-      // stagger: 0.9,
       ease: 'power2.out',
     })
     .from(item6, {
@@ -51,7 +49,6 @@ export const bannerAnimation = (
       skewX: 30,
       opacity: 0,
       autoAlpha: 1,
-      // stagger: 0.9,
       ease: 'power2.out',
     })
     .from(item7, {
@@ -72,7 +69,6 @@ export const bannerAnimation = (
       skewX: 30,
       opacity: 0,
       autoAlpha: 1,
-      // stagger: 0.9,
       ease: 'power2.out',
     });
 };

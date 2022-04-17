@@ -1,5 +1,5 @@
 import { gsap } from 'gsap';
-export const preloaderAnimation = (item1, item2, item3, item4, setLoading) => {
+export const preloaderAnimation = (item1, item2, item3, setLoading) => {
   const tl = gsap.timeline({
     onComplete: () => {
       setLoading(false);
@@ -8,7 +8,7 @@ export const preloaderAnimation = (item1, item2, item3, item4, setLoading) => {
   tl.to(item2, { duration: 1.1, width: '100%', ease: 'Expo.easeInOut' })
     .to(item2, { duration: 1.1, height: '100%', ease: 'Expo.easeInOut' })
     .fromTo(
-      item4,
+      item3,
       {
         duration: 0.9,
         // scale: 1.6,
@@ -16,13 +16,8 @@ export const preloaderAnimation = (item1, item2, item3, item4, setLoading) => {
         scale: 0.1,
         ease: 'Expo.easeInOut',
       },
-      { opacity: 1, scale: 1 }
+      { duration: 0.9, opacity: 1, scale: 1 }
     )
-    .to(item3, {
-      duration: 0.6,
-      width: '100%',
-      ease: 'Expo.easeInOut',
-    })
     .to(item1, {
       duration: 0.2,
       opacity: 0,
