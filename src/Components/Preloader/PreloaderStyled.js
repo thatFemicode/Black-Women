@@ -34,18 +34,15 @@ export const PreloaderStyled = styled.div`
     width: 100%;
     color: #444;
     text-align: center;
-    font-size: 5rem;
+    font-size: 4rem;
     z-index: 31;
     max-width: 100%;
     transform: translate(-50%, -50%);
-    @media (max-width: ${({ theme }) => theme.kobe}) {
-      font-size: 4rem;
-    }
     @media (max-width: ${({ theme }) => theme.dont}) {
       font-size: 3rem;
     }
     @media (max-width: ${({ theme }) => theme.desktop}) {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
     @media (max-width: ${({ theme }) => theme.make}) {
       font-size: 2rem;

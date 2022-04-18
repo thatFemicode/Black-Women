@@ -39,11 +39,7 @@ export const PageGalleryStyled = styled.div`
     align-items: center;
     padding: 2rem;
     justify-content: space-between;
-    @media screen and (min-height: 600px) and (max-height: 880px) and (max-width: 1280px) {
-      right: 50px;
-      bottom: -5%;
-      width: 550px;
-    }
+
     @media (max-width: ${({ theme }) => theme.blogNav}) {
       width: 100%;
       right: 0;
@@ -52,7 +48,7 @@ export const PageGalleryStyled = styled.div`
       bottom: -20px;
     }
     p {
-      font-size: 2rem;
+      font-size: 1.5rem;
       @media (max-width: ${({ theme }) => theme.dont}) {
         font-size: 1.5rem;
       }

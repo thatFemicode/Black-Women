@@ -24,10 +24,10 @@ export const CollageStyled = styled.div`
   }
 
   h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     width: 100%;
     color: #222;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 auto;
     text-align: center;
     max-width: 800px;
@@ -76,12 +76,12 @@ export const CollageStyled = styled.div`
     img {
       object-fit: cover;
       // transform-origin: center left;
-      width: 300px;
+      width: 230px;
       height: 100%;
       transition: all 0.2s ease-in-out;
 
       @media (max-width: ${({ theme }) => theme.kobe}) {
-        width: 250px;
+        width: 200px;
       }
       @media (max-width: ${({ theme }) => theme.kobe}) {
         width: 200px;
@@ -96,9 +96,6 @@ export const CollageStyled = styled.div`
         width: 150px;
         border-radius: 22px;
       }
-      // will-change: transform;
-      // transform: scale(1.1);
-      // transition: transform 2s cubic-bezier(0.77, 0, 0.175, 1);
     }
   }
 `;

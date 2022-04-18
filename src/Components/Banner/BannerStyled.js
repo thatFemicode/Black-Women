@@ -7,7 +7,7 @@ export const BannerStyled = styled.section`
   opacity: 0;
   position: relative;
   padding: 0 2rem;
-  padding-top: 5rem;
+  padding-top: 4rem;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
   &::-webkit-scrollbar {
@@ -36,10 +36,18 @@ export const BannerStyled = styled.section`
   .banner-button {
     z-index: 1;
     position: absolute;
-    top: 200px;
+    top: 130px;
     right: 100px;
     @media (max-width: ${({ theme }) => theme.desktop}) {
       top: 550px;
+      left: 20px;
+    }
+    @media (max-width: ${({ theme }) => theme.make}) {
+      top: 500px;
+      left: 20px;
+    }
+    @media (max-width: ${({ theme }) => theme.mobil}) {
+      top: 450px;
       left: 20px;
     }
   }
@@ -100,13 +108,10 @@ export const BannerStyled = styled.section`
           grid-column-end: 5;
           grid-row: 1/4;
         }
-        @media (max-width: ${({ theme }) => theme.image}) {
-          grid-row: 1/3;
+        @media (max-width: ${({ theme }) => theme.make}) {
           grid-column: 1/5;
         }
-        @media (max-width: ${({ theme }) => theme.mobil}) {
-          grid-column: 1/6;
-        }
+
         .main {
           width: 100%;
           display: flex;
@@ -124,33 +129,24 @@ export const BannerStyled = styled.section`
               height: 100%;
 
               img {
-                width: 350px;
+                width: 250px;
                 border-radius: 1rem;
-                @media (max-width: ${({ theme }) => theme.mins}) {
-                  width: 360px;
-                }
 
-                @media (max-width: ${({ theme }) => theme.kobe}) {
-                  width: 300px;
-                }
-                @media screen and (min-height: 600px) and (max-height: 800px) and (max-width: 1280px) {
-                  width: 270px;
-                }
                 @media (max-width: ${({ theme }) => theme.dont}) {
-                  width: 270px;
-                }
-                @media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1024px) {
                   width: 210px;
                 }
                 @media (max-width: ${({ theme }) => theme.image}) {
-                  width: 200px;
+                  width: 190px;
+                }
+                @media (max-width: ${({ theme }) => theme.desktop}) {
+                  width: 180px;
                 }
                 @media (max-width: ${({ theme }) => theme.make}) {
-                  width: 140px;
+                  width: 160px;
                 }
 
                 @media (max-width: ${({ theme }) => theme.mobil}) {
-                  width: 120px;
+                  width: 130px;
                 }
               }
             }
@@ -167,27 +163,22 @@ export const BannerStyled = styled.section`
             }
 
             p {
-              font-size: 7rem;
+              font-size: 5rem;
               color: #222;
 
-              @media (max-width: ${({ theme }) => theme.minss}) {
-                font-size: 6rem;
-              }
               @media screen and (min-height: 600px) and (max-height: 800px) and (max-width: 1280px) {
                 font-size: 4.5rem;
               }
 
               @media (max-width: ${({ theme }) => theme.kobe}) {
-                font-size: 4.5rem;
-              }
-              @media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1024px) {
                 font-size: 4rem;
               }
-              @media (max-width: ${({ theme }) => theme.hero}) {
-                font-size: 3.5rem;
-              }
-              @media (max-width: ${({ theme }) => theme.image}) {
+
+              @media (max-width: ${({ theme }) => theme.dont}) {
                 font-size: 4rem;
+              }
+              @media (max-width: ${({ theme }) => theme.desktop}) {
+                font-size: 3rem;
               }
               @media (max-width: ${({ theme }) => theme.make}) {
                 font-size: 2rem;
@@ -207,28 +198,21 @@ export const BannerStyled = styled.section`
           grid-column-start: 6;
           grid-column-end: 13;
         }
-        @media (max-width: ${({ theme }) => theme.kobe}) {
-          grid-column-start: 6;
-          grid-column-end: 13;
-          grid-row: 6/13;
-        }
+
         @media (max-width: ${({ theme }) => theme.dont}) {
           grid-column-start: 3;
           grid-column-end: 7;
           grid-row: 3/7;
         }
-        @media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1024px) {
-          grid-row: 3/7;
-        }
-        @media (max-width: ${({ theme }) => theme.hero}) {
-          grid-row: 3/7;
-        }
-        @media (max-width: ${({ theme }) => theme.image}) {
+        @media (max-width: ${({ theme }) => theme.desktop}) {
+          grid-column-start: 2;
+          grid-column-end: 7;
           grid-row: 4/7;
-          grid-column: 3/7;
         }
+
         @media (max-width: ${({ theme }) => theme.make}) {
           grid-column: 2/7;
+          grid-row: 4/7;
         }
 
         .main {
@@ -249,36 +233,24 @@ export const BannerStyled = styled.section`
               height: 100%;
 
               img {
-                width: 350px;
+                width: 250px;
                 border-radius: 1rem;
-                @media (max-width: ${({ theme }) => theme.pics}) {
-                  width: 360px;
-                }
 
-                @media (max-width: ${({ theme }) => theme.kobe}) {
-                  width: 300px;
-                }
-                @media screen and (min-height: 600px) and (max-height: 800px) and (max-width: 1280px) {
-                  width: 270px;
-                }
                 @media (max-width: ${({ theme }) => theme.dont}) {
-                  width: 270px;
-                }
-                @media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1024px) {
                   width: 210px;
                 }
-
                 @media (max-width: ${({ theme }) => theme.image}) {
                   width: 190px;
                 }
                 @media (max-width: ${({ theme }) => theme.desktop}) {
-                  width: 190px;
+                  width: 180px;
                 }
+
                 @media (max-width: ${({ theme }) => theme.make}) {
-                  width: 140px;
+                  width: 160px;
                 }
                 @media (max-width: ${({ theme }) => theme.mobil}) {
-                  width: 120px;
+                  width: 130px;
                 }
               }
             }
@@ -290,33 +262,22 @@ export const BannerStyled = styled.section`
               align-self: center;
             }
             p {
-              font-size: 7rem;
+              font-size: 5rem;
               color: #222;
 
-              @media (max-width: ${({ theme }) => theme.minss}) {
-                font-size: 6rem;
-              }
               @media screen and (min-height: 600px) and (max-height: 800px) and (max-width: 1280px) {
                 font-size: 4.5rem;
               }
-              @media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1024px) {
-                font-size: 4rem;
-              }
+
               @media (max-width: ${({ theme }) => theme.kobe}) {
-                font-size: 4.5rem;
-              }
-              @media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1024px) {
                 font-size: 4rem;
               }
 
-              @media (max-width: ${({ theme }) => theme.hero}) {
-                font-size: 3.5rem;
-              }
-              @media (max-width: ${({ theme }) => theme.image}) {
+              @media (max-width: ${({ theme }) => theme.dont}) {
                 font-size: 4rem;
               }
               @media (max-width: ${({ theme }) => theme.desktop}) {
-                font-size: 4rem;
+                font-size: 3rem;
               }
               @media (max-width: ${({ theme }) => theme.make}) {
                 font-size: 2rem;
@@ -331,9 +292,7 @@ export const BannerStyled = styled.section`
         width: 100%;
         height: 100%;
         text-align: center;
-        @media (max-width: ${({ theme }) => theme.kobe}) {
-          grid-row: 6/13;
-        }
+
         @media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1024px) {
           grid-row: 3/7;
         }
@@ -342,38 +301,29 @@ export const BannerStyled = styled.section`
           grid-column-end: 7;
           grid-row: 3/7;
         }
-        @media (max-width: ${({ theme }) => theme.hero}) {
-          grid-row: 3/7;
-        }
 
         p {
           width: 100%;
           height: 100%;
-          font-size: 5rem;
+          font-size: 4rem;
           color: #222;
           @media (max-width: ${({ theme }) => theme.kobe}) {
             font-size: 3.5rem;
-            margin-top: -2rem;
-          }
-          @media screen and (min-height: 600px) and (max-height: 800px) and (max-width: 1280px) {
-            font-size: 3.5rem;
-          }
-          @media screen and (min-height: 500px) and (max-height: 600px) and (max-width: 1024px) {
-            font-size: 3rem;
-          }
-          @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
             margin-top: 1rem;
           }
-          @media (max-width: ${({ theme }) => theme.hero}) {
+          @media (max-width: ${({ theme }) => theme.dont}) {
             font-size: 3rem;
+            margin-top: -1rem;
           }
+
           @media (max-width: ${({ theme }) => theme.image}) {
-            font-size: 3rem;
+            font-size: 2.7rem;
           }
           @media (max-width: ${({ theme }) => theme.desktop}) {
-            font-size: 3rem;
-            margin-top: 0;
+            margin-top: 3rem;
+            font-size: 2.3rem;
           }
+
           @media (max-width: ${({ theme }) => theme.make}) {
             font-size: 2rem;
           }

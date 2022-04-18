@@ -29,9 +29,10 @@ export const BottomStyled = styled.div`
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  @media (max-width: ${({ theme }) => theme.min}) {
+  @media (max-width: ${({ theme }) => theme.make}) {
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-top: 170px;
   }
   @media (max-width: ${({ theme }) => theme.mobil}) {
     margin-top: 170px;
@@ -40,7 +41,7 @@ export const BottomStyled = styled.div`
 
   .hero-usedBy-copy {
     flex: 3;
-    max-width: 560px;
+    max-width: 450px;
     @media (max-width: ${({ theme }) => theme.minss}) {
       max-width: 450px;
     }
@@ -54,8 +55,9 @@ export const BottomStyled = styled.div`
     p {
       color: #fff;
       mix-blend-mode: difference;
-      font-size: 1.9rem;
+      font-size: 1.5rem;
       font-weight: 400;
+      text-align: justify;
       line-height: 1.6;
       @media (max-width: ${({ theme }) => theme.minss}) {
         font-size: 1.7rem;
@@ -82,16 +84,16 @@ export const BottomStyled = styled.div`
       margin-top: 3rem;
       object-fit: cover;
       border-radius: 1rem;
-      width: 300px;
+      width: 220px;
       @media (max-width: ${({ theme }) => theme.kobe}) {
         width: 300px;
       }
       @media (max-width: ${({ theme }) => theme.dont}) {
-        width: 200px;
-      }
-      @media (max-width: ${({ theme }) => theme.mobil}) {
         width: 150px;
       }
+      /* @media (max-width: ${({ theme }) => theme.mobil}) {
+        width: 100px;
+      } */
     }
   }
 `;

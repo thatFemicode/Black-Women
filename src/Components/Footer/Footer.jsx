@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import scrollTrigger from 'gsap/ScrollTrigger';
 import SplitText from '../../utils/Split3.min';
 import ItemButton from '../Button/ItemButton';
-
+import { Link } from 'react-router-dom';
 gsap.registerPlugin(scrollTrigger);
 const Footer = () => {
   const footerRef = useRef(null);
@@ -41,7 +41,9 @@ const Footer = () => {
       <h1 className="text" ref={text}>
         You are beautiful, strong, bold and Dont ever doubt yourself{' '}
       </h1>
-      <ItemButton name={'Gallery'} />
+      <Link to="/gallery">
+        <ItemButton name={'Gallery'} />
+      </Link>
     </FooterStyled>
   );
 };

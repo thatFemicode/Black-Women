@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const OuterLayout = styled.section`
   /* max-width: 1300px; */
   overflow-x: hidden;
-  max-width: 1700px;
+  max-width: 1300px;
   width: 100%;
   height: 100%;
   /* width: 70%; */

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { bounce } from './animtion';
 const ButtonStyled = styled.button`
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 0.25rem 0.85rem;
   border-radius: 50%;
   border-color: transparent;
@@ -14,11 +14,11 @@ const ButtonStyled = styled.button`
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   @media (max-width: ${({ theme }) => theme.make}) {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     font-size: 0.8rem;
     padding: 0.15rem 0.65rem;
   }

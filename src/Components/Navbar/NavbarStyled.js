@@ -43,10 +43,7 @@ export const NavbarStyled = styled.nav`
       }
     }
     .hashtag {
-      margin-top: 1rem;
-      display: flex;
-      align-items: center;
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       @media (max-width: ${({ theme }) => theme.mobil}) {
         font-size: 1rem;
       }

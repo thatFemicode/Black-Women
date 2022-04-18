@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import frame from './img/frame.png';
 export const BlockStyled = styled.div`
-  width: 350px;
-  height: 650px;
-  top: 400px;
+  width: 280px;
+  height: 600px;
+  top: 340px;
   position: relative;
   transform: scale(1.2);
 
   @media (max-width: ${({ theme }) => theme.kobe}) {
-    width: 300px;
+    width: 250px;
     height: 550px;
     top: 250px;
     /* left: 60%; */
@@ -41,7 +41,7 @@ export const BlockStyled = styled.div`
       position: absolute;
       width: 64%;
       height: auto;
-      top: 70px;
+      top: 100px;
       left: 9%;
       border-radius: 20px;
       overflow: hidden;
@@ -61,7 +61,6 @@ export const BlockContainer = styled.div`
   position: absolute;
   width: 105%;
   margin: 0 auto;
-
   display: flex;
   justify-content: center;
   align-items: center;
