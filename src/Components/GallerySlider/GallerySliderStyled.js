@@ -51,10 +51,6 @@ export const GallerySliderStyled = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    /* @media (max-width: ${({ theme }) => theme.mins}) {
-      width: 450px;
-      height: 550px;
-    } */
     @media (max-width: ${({ theme }) => theme.dont}) {
       width: 430px;
       height: 500px;

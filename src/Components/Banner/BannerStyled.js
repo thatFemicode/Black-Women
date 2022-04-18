@@ -8,8 +8,8 @@ export const BannerStyled = styled.section`
   position: relative;
   padding: 0 2rem;
   padding-top: 4rem;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -86,8 +86,8 @@ export const BannerStyled = styled.section`
       @media screen and (min-height: 1000px) and (max-height: 1366px) and (max-width: 1024px) {
         height: 100%;
       }
-      -ms-overflow-style: none; /* Internet Explorer 10+ */
-      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
       &::-webkit-scrollbar {
         display: none;
       }
