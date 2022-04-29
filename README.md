@@ -6,7 +6,7 @@ Blackwomen rule was built to appreciate black women over the world during black 
 
 https://blackwomen.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with [Create React App](https://github.com/facebook/create-react-app).
 
 ### npm install
 
